@@ -1,0 +1,389 @@
+/* Import Poppins font for a modern, clean look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f2f5;
+  color: #2d2d2d;
+}
+
+/* Header styles */
+header {
+  background: #2874f0;
+  color: white;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.6rem 2.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 1rem;
+  background: #fff;
+  color: #2d2d2d;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  stroke: #666;
+  stroke-width: 2;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav {
+  display: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+.icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.icon-btn:hover {
+  background: #1a5bc4;
+}
+
+.icon-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: white;
+  stroke-width: 2;
+}
+
+/* Main layout */
+main .container {
+  display: flex;
+  gap: 1rem;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 1rem 0;
+}
+
+.sidebar h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #2d2d2d;
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.sidebar a:hover {
+  color: #2874f0;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Carousel styles */
+.carousel {
+  position: relative;
+  height: 250px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+  position: relative;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.carousel-text h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.carousel-text p {
+  font-size: 0.9rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+/* Product section */
+.products {
+  padding: 1rem 0;
+}
+
+.products h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card.featured {
+  grid-column: span 2;
+  background: #f8faff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.product-card.featured img {
+  height: 200px;
+}
+
+.product-card div {
+  padding: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.product-card p {
+  color: #2874f0;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.product-card button {
+  width: 100%;
+  padding: 0.5rem;
+  background: #ffd700;
+  color: #2d2d2d;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-card button:hover {
+  background: #e6c200;
+}
+
+/* Footer styles */
+footer {
+  background: #172337;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+footer a:hover {
+  color: #ffd700;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: #0a1a3b;
+}
+
+body.dark-mode .search-bar input {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  box-shadow: none;
+}
+
+body.dark-mode .sidebar a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .sidebar a:hover {
+  color: #ffd700;
+}
+
+body.dark-mode .product-card {
+  background: #2a2a2a;
+}
+
+body.dark-mode .product-card.featured {
+  background: #1e2a44;
+}
+
+body.dark-mode .product-card p {
+  color: #ffd700;
+}
+
+body.dark-mode .product-card button {
+  background: #2874f0;
+  color: white;
+}
+
+body.dark-mode .product-card button:hover {
+  background: #1a5bc4;
+}
+
+body.dark-mode footer {
+  background: #0a1a3b;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .search-bar {
+    width: 100%;
+    max-width: none;
+  }
+  .sidebar {
+    display: none;
+  }
+}
